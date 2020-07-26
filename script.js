@@ -43,13 +43,13 @@ const startBtn = {
 
 // control the character
 cvs.addEventListener("click", function(evt){
+  theme.play();
   switch(state.current) {
     case state.getReady:
       state.current = state.game;
       break;
     case state.game:
       ironman.boost();
-      // boostSound.play();
       break;
     case state.over:
       let rect = cvs.getBoundingClientRect();
@@ -227,7 +227,7 @@ const pipes = {
 
   w : 80,
   h : 400,
-  gap : 150,
+  gap : 100,
   maxYPos : -150,
   dx : 2, 
 
@@ -279,7 +279,7 @@ const pipes = {
       if (p.x + this.w <= 0) {
         this.position.shift();
         score.value += 1;
-        scoreSound.play();
+        boostSound.play();
 
         score.best = Math.max(score.value, score.best);
         localStorage.setItem("best", score.best);

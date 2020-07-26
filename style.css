@@ -12,6 +12,11 @@ a {
   visibility: hidden;
 }
 
+.logo {
+  width: 500px;
+  height: 200px;
+}
+
 #homeBtn {
 height: 50px;
 width: 100px;
