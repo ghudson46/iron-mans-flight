@@ -42,7 +42,7 @@ const startBtn = {
 }
 
 // control the character
-cvs.addEventListener("click", function(){
+cvs.addEventListener("click", function(evt){
   switch(state.current) {
     case state.getReady:
       state.current = state.game;
@@ -119,7 +119,7 @@ const ironman = {
   w : 65,
   h : 37,
 
-  radius : 12,
+  radius : 4,
 
   frame : 0,
 
@@ -214,9 +214,7 @@ const gameOver = {
 
 // pipes (lokis sceptor)
 const pipes = {
-  position : [
-
-  ],
+  position : [],
 
   top : {
     sX : 1511,
@@ -229,7 +227,7 @@ const pipes = {
 
   w : 80,
   h : 400,
-  gap : 85,
+  gap : 150,
   maxYPos : -150,
   dx : 2, 
 
@@ -247,6 +245,7 @@ const pipes = {
       ctx.drawImage(sprite, this.bottom.sX, this.bottom.sY, this.w, this.h, p.x, bottomYPos, this.w, this.h);
     }
   },
+
   update : function() {
     if (state.current !== state.game) return;
 
@@ -258,6 +257,7 @@ const pipes = {
     }
     for (let i = 0; i < this.position.length; i++) {
       let p = this.position[i];
+
 
       let bottomPipeYPos = p.y + this.h + this.gap;
 
@@ -273,7 +273,6 @@ const pipes = {
         hit.play();
       }
 
-      // move the pipes to the left
       p.x -= this.dx;
 
       // if the pipes go beyond canvas, we delete them from the array
@@ -282,7 +281,7 @@ const pipes = {
         score.value += 1;
         scoreSound.play();
 
-        score.best = Math.max(scoure.value, score.best);
+        score.best = Math.max(score.value, score.best);
         localStorage.setItem("best", score.best);
       }
     }
@@ -294,7 +293,7 @@ const pipes = {
 
 // score 
 const score = {
-  best: parseInt(localStorage.getItem("best") || 0),
+  best: parseInt(localStorage.getItem("best")) || 0,
   value : 0,
 
   draw : function() {
