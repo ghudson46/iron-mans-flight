@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Iron-Man Flight Trainer</title>
-    <link href="https://fonts.googleapis.com/css?family=Teko:700">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+
   </head>
   <body>
+    <audio id="theme" src="assets/audio/theme.mp3" autoplay></audio>
 
-    <canvas id="mycanvas" width="320" height="480"></canvas>
+    <canvas id="mycanvas" width="320" height="480">
+      <a href="game.html"><button id="homeBtn" class="hide">HOME</button></a>
+      <button id="replayBtn" class="hide">REPLAY</button>
+    </canvas>
 
     <script src="script.js"></script>
   </body>
