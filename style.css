@@ -30,7 +30,7 @@ a {
   and (orientation: portrait) {
 
     html {
-      background-image: url("assets/img/jarvis.png");
+      background-image: url("assets/img/jarvis.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       width: 400px;
