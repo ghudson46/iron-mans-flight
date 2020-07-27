@@ -30,6 +30,8 @@ a {
 
     html {
       background-image: url("assets/img/gameboy.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     canvas {
