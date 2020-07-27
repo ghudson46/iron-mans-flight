@@ -47,7 +47,7 @@ const startBtn = {
 }
 
 // control the character
-cvs.addEventListener("touchstart", function(evt){
+doucment.addEventListener("touchstart", function(evt){
   switch(state.current) {
     case state.getReady:
       state.current = state.game;
