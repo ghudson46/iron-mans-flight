@@ -47,7 +47,7 @@ const startBtn = {
 }
 
 // control the character
-doucment.addEventListener("touchstart", function(evt){
+cvs.addEventListener("touchstart", function(evt){
   switch(state.current) {
     case state.getReady:
       state.current = state.game;
@@ -79,7 +79,7 @@ doucment.addEventListener("touchstart", function(evt){
 const bg = {
   sX: 35,
   sY: 710,
-  w: 600,
+  w: 700,
   h: 755,
   x: 0,
   y: 70,
@@ -94,7 +94,7 @@ const bg = {
 const fg = {
   sX: 902,
   sY: 962,
-  w: 500,
+  w: 700,
   h: 200,
   x: 0,
   y: 560,
@@ -209,8 +209,8 @@ const gameOver = {
   sY : 75,
   w : 225,
   h : 275,
-  x : cvs.width/2 - 200,
-  y : 28,
+  x : cvs.width/2 - 120,
+  y : 100,
 
   draw : function() {
     if (state.current == state.over) {
@@ -318,11 +318,11 @@ const score = {
     } else if (state.current == state.over) {
       // score value
       ctx.font = "25px Teko";
-      ctx.fillText(this.value, 225, 186);
-      ctx.strokeText(this.value, 225, 186);
+      ctx.fillText(this.value, 400, 260);
+      ctx.strokeText(this.value, 400, 260);
       // best score 
-      ctx.fillText(this.best, 225, 228);
-      ctx.strokeText(this.best, 225, 228 );
+      ctx.fillText(this.best, 400, 302);
+      ctx.strokeText(this.best, 400, 302);
     }
   },
   reset : function() {
