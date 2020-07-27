@@ -322,7 +322,7 @@ const score = {
       ctx.strokeText(this.value, 400, 260);
       // best score 
       ctx.fillText(this.best, 400, 302);
-      ctx.strokeText(this.best, 400, 302);
+      ctx.strokeText(this.best, 400, 297);
     }
   },
   reset : function() {

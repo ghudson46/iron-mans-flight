@@ -13,6 +13,10 @@ a {
   visibility: hidden;
 }
 
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
 .logo {
   width: 500px;
   height: 200px;
