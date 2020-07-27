@@ -10,24 +10,19 @@ sprite.src = "assets/img/gamesprites.png";
 
 // load sounds
 const theme = new Audio();
-theme.src = "assets/audio/theme.mp3"
+theme.src = "assets/audio/theme.mp3";
 
 const scoreSound = new Audio();
-scoreSound.src = "assets/audio/pointsound.wav"
+scoreSound.src = "assets/audio/pointsound.wav";
 
 const boostSound = new Audio();
-boostSound.src = "assets/audio/jump noise.wav"
+boostSound.src = "assets/audio/jump noise.wav";
 
 const hit = new Audio();
-hit.src = "assets/audio/crash sound.wav"
+hit.src = "assets/audio/crash sound.wav";
 
 const die = new Audio();
 die.src = "assets/audio/die.wav"
-
-window.addEventListener('load', (event) => {
-  event.preventDefault();
-  theme.play();
-});
 
 // game state
 const state = {
@@ -51,6 +46,7 @@ cvs.addEventListener("touchstart", function(evt){
   switch(state.current) {
     case state.getReady:
       state.current = state.game;
+      theme.play();
       pipes.reset();
       ironman.speedReset();
       score.reset();
@@ -59,6 +55,7 @@ cvs.addEventListener("touchstart", function(evt){
       ironman.boost();
       break;
     case state.over:
+      pipes.reset();
       let rect = cvs.getBoundingClientRect();
       let clickX = evt.clientX - rect.left;
       let clickY = evt.clientY - rect.top;
