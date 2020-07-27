@@ -2,6 +2,7 @@ canvas {
   border: 1px solid #000;
   display: block;
   margin: 0 auto;
+  background-color: #acadc2;
 }
 
 a {
@@ -17,22 +18,15 @@ a {
   height: 200px;
 }
 
-#homeBtn {
-height: 50px;
-width: 100px;
-background-color: red;
-border: 2px solid gold;
-font-family: 'Teko';
-font-size: 24px;
-padding: 5px;
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    html {
+      background-image: url("assets/img/jarvis.jpg");
+    }
 }
 
-#replayBtn {
-  height: 50px;
-  width: 100px;
-  background-color: red;
-  border: 2px solid gold;
-  font-family: 'Teko';
-  font-size: 24px;
-  padding: 5px;
-}
+

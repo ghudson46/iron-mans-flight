@@ -24,6 +24,11 @@ hit.src = "assets/audio/crash sound.wav"
 const die = new Audio();
 die.src = "assets/audio/die.wav"
 
+window.addEventListener('load', (event) => {
+  event.preventDefault();
+  theme.play();
+});
+
 // game state
 const state = {
   current : 0,
@@ -35,18 +40,20 @@ const state = {
 
 // start button coord
 const startBtn = {
-  x : 120,
+  x : 150,
   y : 263,
   w : 83,
   h : 29
 }
 
 // control the character
-cvs.addEventListener("click", function(evt){
-  theme.play();
+cvs.addEventListener("touchstart", function(evt){
   switch(state.current) {
     case state.getReady:
       state.current = state.game;
+      pipes.reset();
+      ironman.speedReset();
+      score.reset();
       break;
     case state.game:
       ironman.boost();
@@ -73,9 +80,9 @@ const bg = {
   sX: 35,
   sY: 710,
   w: 600,
-  h: 490,
+  h: 755,
   x: 0,
-  y: 0,
+  y: 70,
 
   draw : function() {
     ctx.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h);
@@ -85,16 +92,17 @@ const bg = {
 
 // foreground
 const fg = {
-  sX: 0,
-  sY: 1160,
-  w: 600,
-  h: 40,
+  sX: 902,
+  sY: 962,
+  w: 500,
+  h: 200,
   x: 0,
-  y: 450,
+  y: 560,
 
   dx : 2,
 
   draw : function() {
+
     ctx.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h);
   },
 
@@ -119,7 +127,7 @@ const ironman = {
   w : 65,
   h : 37,
 
-  radius : 4,
+  radius : 1,
 
   frame : 0,
 
@@ -201,7 +209,7 @@ const gameOver = {
   sY : 75,
   w : 225,
   h : 275,
-  x : cvs.width/2 - 115,
+  x : cvs.width/2 - 200,
   y : 28,
 
   draw : function() {
@@ -227,7 +235,7 @@ const pipes = {
 
   w : 80,
   h : 400,
-  gap : 100,
+  gap : 85,
   maxYPos : -150,
   dx : 2, 
 
@@ -325,7 +333,7 @@ const score = {
 
 // draws elements and character
 function draw() {
-  ctx.fillStyle = "#8eb4ff"; //clears canvas by filling 
+  ctx.fillStyle = "#acadc2"; //clears canvas by filling 
   ctx.fillRect(0, 0, cvs.width, cvs.height); //sets the fill to start in top left corner and match the width and height of canvas
 
   // draw background
@@ -349,7 +357,6 @@ function draw() {
 // update
 function update() {
   ironman.update();
-  fg.update();
   pipes.update();
 }
 
