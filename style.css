@@ -29,7 +29,11 @@ a {
   and (orientation: portrait) {
 
     html {
-      background-image: url("assets/img/jarvis.jpg");
+      background-image: url("assets/img/gameboy.jpg");
+    }
+
+    canvas {
+      margin-top: 100px;
     }
 }
 
