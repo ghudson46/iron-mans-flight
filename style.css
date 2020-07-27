@@ -3,6 +3,11 @@ canvas {
   display: block;
   margin: 0 auto;
   background-color: #acadc2;
+  touch-action: manipulation;
+}
+
+body {
+  touch-action: manipulation;
 }
 
 a {
@@ -11,10 +16,6 @@ a {
 
 .hide {
   visibility: hidden;
-}
-
-.disable-dbl-tap-zoom {
-  touch-action: manipulation;
 }
 
 .logo {
@@ -36,6 +37,7 @@ a {
 
     canvas {
       margin-top: 100px;
+      touch-action: manipulation;
     }
 }
 
