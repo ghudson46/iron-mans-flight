@@ -30,14 +30,17 @@ a {
   and (orientation: portrait) {
 
     html {
-      background-image: url("assets/img/gameboy.jpg");
+      background-image: url("assets/img/jarvis.png");
       background-repeat: no-repeat;
       background-size: cover;
+      width: 400px;
+      height: 300px;
     }
 
     canvas {
       margin-top: 100px;
       touch-action: manipulation;
+      height: 300
     }
 }
 
