@@ -3,7 +3,6 @@ canvas {
   display: block;
   margin: 30px auto;
   background-color: #acadc2;
-  touch-action: manipulation;
 }
 
 body {
@@ -53,19 +52,5 @@ a {
   transform: scale(1.05);
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-
-    body {
-      touch-action: manipulation;
-    }
-
-    canvas {
-      touch-action: manipulation;
-    }
-}
 
 
