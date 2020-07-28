@@ -2,20 +2,19 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=700, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Iron-Man Flight Trainer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
     <link href="assets/img/touchIcon.png" rel="apple-touch-icon" />
 
   </head>
-  <body id="backgroundImg">
-    <h1><img id="headerlogo" src="assets/img/ironmanlogo.png" alt="iron man logo"></h1>
+  <body>
+    <iframe src="assets/audio/I am iron man with song.wav" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe> 
 
-    <div>
-      <a href="game.html"><button id="startBtn">START GAME</button></a>
-    </div>
-    <audio id="theme" src="assets/audio/I am iron man with song.wav" autoplay="autoplay"></audio>
-
+    <canvas id="mycanvas" class="disable-dbl-tap-zoom" width="700" height="600">
+    </canvas>
 
     <script src="script.js"></script>
   </body>

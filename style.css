@@ -1,13 +1,29 @@
 canvas {
   border: 1px solid #000;
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
   background-color: #acadc2;
   touch-action: manipulation;
 }
 
 body {
   touch-action: manipulation;
+  background-image: url("assets/img/561271.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+button {
+  background-color: red;
+  color: gold;
+  font-family: "Teko";
+  font-size: 26px;
+  padding: 10px;
+  position: relative;
+  top: 400px;
+  left: 550px;
 }
 
 a {
@@ -23,25 +39,36 @@ a {
   height: 200px;
 }
 
+#headerlogo {
+  height: 150px;
+  width: 500px;
+  position: absolute;
+  top: 5;
+  left: 30%;
+}
+
+
+#startBtn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-    html {
-      background-image: url("assets/img/background.jpg");
+    body {
+      background-image: url("assets/img/jarvisbackground.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      width: 400px;
-      height: 300px;
     }
 
     canvas {
-      width: 300;
+      width: 400;
       margin-top: 100px;
       touch-action: manipulation;
-      
     }
 }
 
