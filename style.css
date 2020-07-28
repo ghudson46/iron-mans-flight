@@ -40,7 +40,7 @@ a {
     canvas {
       margin-top: 100px;
       touch-action: manipulation;
-      height: 300
+      width: 300
     }
 }
 
