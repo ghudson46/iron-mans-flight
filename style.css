@@ -30,7 +30,7 @@ a {
   and (orientation: portrait) {
 
     html {
-      background-image: url("assets/img/jarvis.jpg");
+      background-image: url("assets/img/background.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       width: 400px;
@@ -38,9 +38,10 @@ a {
     }
 
     canvas {
+      width: 300;
       margin-top: 100px;
       touch-action: manipulation;
-      width: 300
+      
     }
 }
 
