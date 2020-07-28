@@ -315,11 +315,11 @@ const score = {
     } else if (state.current == state.over) {
       // score value
       ctx.font = "25px Teko";
-      ctx.fillText(this.value, 400, 260);
-      ctx.strokeText(this.value, 400, 260);
+      ctx.fillText(this.value, 250, 260);
+      ctx.strokeText(this.value, 250, 260);
       // best score 
-      ctx.fillText(this.best, 400, 302);
-      ctx.strokeText(this.best, 400, 297);
+      ctx.fillText(this.best, 250, 302);
+      ctx.strokeText(this.best, 250, 297);
     }
   },
   reset : function() {
